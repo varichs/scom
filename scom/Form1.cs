@@ -307,7 +307,11 @@ namespace scom
                 button2.ForeColor = Color.Lime;
             }
         }
-
+        /// <summary>
+        /// 发送数据
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             byte[] data = new byte[1];
