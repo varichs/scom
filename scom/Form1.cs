@@ -13,6 +13,7 @@ namespace scom
 {
     public partial class Form1 : Form
     {
+        //https://github.com/varichs/scom.git
         //参数存储功能
         [DllImport("kernel32")]
         //系统dll导入ini写函数
@@ -254,7 +255,11 @@ namespace scom
             /*------------必须手动添加的接收事件-------------*/
             serialPort1.DataReceived += new SerialDataReceivedEventHandler(port_DataReceived);
         }
-
+        /// <summary>
+        /// 数据接收
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void port_DataReceived(object sender,SerialDataReceivedEventArgs e)
         {
             //如果接收模式为字符模式
@@ -278,7 +283,11 @@ namespace scom
                 }
             }
         }
-
+        /// <summary>
+        /// 关闭串口
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             try
